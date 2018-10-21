@@ -73,6 +73,16 @@ app.get('/bad', (req, res) => {
     })
 });
 
+
+//projects, header, footer, in parital add new link
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects',
+        welcomeMessage: 'This is our project page',
+    });
+});
+
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
 });
